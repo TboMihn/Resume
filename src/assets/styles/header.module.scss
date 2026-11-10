@@ -1,0 +1,201 @@
+.header {
+	display: flex;
+	flex-direction: column;
+
+	.headerContent {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: 600px;
+
+		background-image: url("../images/Sunset\ beach\ portrait\ composite\ –\ 9\ Nov\ 2026\,\ 9.56\ am.png");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+
+		.headerImage {
+			width: 100%;
+			height: 400px;
+		}
+
+		.nav {
+			background: rgba($navy-mid, 0.9);
+			display: flex;
+			position: fixed;
+			width: 1124px;
+			top: 0;
+
+			z-index: 1000;
+
+			.navName {
+				color: $white;
+				font-family: $font-sans;
+				font-size: $size-lg;
+				font-weight: bold;
+				margin-right: auto;
+				padding: $sp-4;
+
+				a {
+					color: $white;
+					text-decoration: none;
+					font-weight: bold;
+
+					&:hover {
+						color: $accent-light;
+					}
+				}
+			}
+
+			ul {
+				list-style: none;
+				display: flex;
+				padding: 0;
+				vertical-align: middle;
+
+				li {
+					margin-right: $sp-4;
+					font-size: $size-xs;
+
+					a {
+						color: $white;
+						text-decoration: none;
+						font-weight: bold;
+
+						&:hover {
+							color: $accent-light;
+						}
+					}
+				}
+			}
+
+			.nav_download {
+				font-size: $size-xs;
+				vertical-align: middle;
+				padding: $sp-2 $sp-8;
+
+				.nav_btn {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					background: $navy-mid;
+					color: $white;
+					width: 200px;
+					text-decoration: none;
+					font-weight: bold;
+					border: 1px solid $white;
+					border-radius: 20px;
+					padding: $sp-1 $sp-4;
+
+					&:hover {
+						color: $accent-light;
+					}
+
+					.nav_btn_icon {
+						font-size: $size-sm;
+						margin-left: $sp-2;
+					}
+				}
+			}
+		}
+
+		.headerMain {
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			padding-top: 50px;
+
+			.headerMainLeft {
+				display: flex;
+				flex-direction: column;
+				justify-content: left;
+				padding: $sp-10;
+				width: 50%;
+
+				.headerMainLeftTitle {
+					font-size: $size-3xl;
+					font-weight: bold;
+					color: $white;
+				}
+				.headerMainLeftSubTitle {
+					padding-top: $sp-2;
+					font-size: $size-lg;
+					font-weight: bold;
+					color: $off-white;
+				}
+				.headerMainLeftDescription {
+					font-size: $size-md;
+					color: $white;
+					text-align: left;
+					padding: $sp-6 0 $sp-6 0;
+				}
+				.headerMainLeftBtn {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					background: $accent;
+					color: $white;
+					width: 200px;
+					text-decoration: none;
+					font-weight: bold;
+					border: 1px solid $accent-dark;
+					border-radius: 20px;
+					padding: $sp-2 $sp-4;
+
+					&:hover {
+						background: $accent-light;
+						border-color: $accent-light;
+						color: $navy-mid;
+					}
+
+					.headerMainLeftBtnText {
+						display: inline-flex;
+						align-items: center;
+						gap: $sp-1;
+						margin-right: $sp-2;
+					}
+					.headerMainLeftBtnIcon {
+						font-size: $size-sm;
+						margin-left: $sp-2;
+					}
+				}
+			}
+			// .headerMainRight {
+			// 	display: flex;
+			// 	justify-content: center;
+			// 	align-items: center;
+
+			// 	.headerMainRightImage {
+			// 		width: 462px;
+			// 		height: auto;
+			// 		clip-path: inset(0% 2% 22.5% 2%);
+			// 	}
+			// }
+			.headerMainRight {
+				width: 50%;
+			}
+		}
+	}
+}
+
+.main {
+	background: white;
+	display: flex;
+	flex-direction: column;
+
+	.techStack {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		.techStackIcon {
+			font-size: $size-3xl;
+			color: $navy-dark;
+			margin: 0 $sp-4;
+		}
+	}
+}
+
+.footer {
+	background: linear-gradient(135deg, $navy 0%, $steel 100%);
+	border-bottom: 3px solid $accent;
+	padding: $sp-12 $sp-6 $sp-10;
+}
