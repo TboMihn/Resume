@@ -1,0 +1,79 @@
+.nav {
+	background: rgba($navy-mid, 0.9);
+	display: flex;
+	position: fixed;
+	width: 1124px;
+	top: 0;
+
+	z-index: 1000;
+
+	.navName {
+		color: $white;
+		font-family: $font-sans;
+		font-size: $size-lg;
+		font-weight: bold;
+		margin-right: auto;
+		padding: $sp-4;
+
+		a {
+			color: $white;
+			text-decoration: none;
+			font-weight: bold;
+
+			&:hover {
+				color: $accent-light;
+			}
+		}
+	}
+
+	ul {
+		list-style: none;
+		display: flex;
+		padding: 0;
+		vertical-align: middle;
+
+		li {
+			margin-right: $sp-4;
+			font-size: $size-xs;
+
+			a {
+				color: $white;
+				text-decoration: none;
+				font-weight: bold;
+
+				&:hover {
+					color: $accent-light;
+				}
+			}
+		}
+	}
+
+	.nav_download {
+		font-size: $size-xs;
+		vertical-align: middle;
+		padding: $sp-2 $sp-8;
+
+		.nav_btn {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: $navy-mid;
+			color: $white;
+			width: 200px;
+			text-decoration: none;
+			font-weight: bold;
+			border: 1px solid $white;
+			border-radius: 20px;
+			padding: $sp-1 $sp-4;
+
+			&:hover {
+				color: $accent-light;
+			}
+
+			.nav_btn_icon {
+				font-size: $size-sm;
+				margin-left: $sp-2;
+			}
+		}
+	}
+}

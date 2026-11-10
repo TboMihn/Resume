@@ -1,0 +1,10 @@
+.techStack {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	.techStackIcon {
+		font-size: $size-3xl;
+		color: $navy-dark;
+		margin: 0 $sp-4;
+	}
+}
