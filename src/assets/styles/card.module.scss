@@ -27,6 +27,7 @@
 	width: 90%;
 	left: 30px;
 	padding: 17px;
+	margin: 17px;
 	box-sizing: border-box;
 	border-radius: 5px;
 	border: 1px solid #ccc;
@@ -34,6 +35,27 @@
 	transition:
 		box-shadow 0.3s ease,
 		transform 0.3s ease;
+
+	.toggleBtn {
+		background: none;
+		border: none;
+		color: $navy;
+		cursor: pointer;
+		font-weight: 600;
+		padding: 0.25rem 0;
+		margin: 0.5rem 0;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	.timelineCardDescription {
+		text-align: left;
+		ul {
+			margin: 0;
+		}
+	}
 }
 
 .timelineCard:hover {

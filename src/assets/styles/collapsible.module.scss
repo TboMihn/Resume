@@ -1,0 +1,32 @@
+.collapsible {
+	display: grid;
+	grid-template-rows: 0fr;
+	/* visibility is delayed on close so the content stays visible while
+	   it animates shut, then becomes unfocusable for keyboard users */
+	visibility: hidden;
+	transition:
+		grid-template-rows 0.4s ease,
+		visibility 0s linear 0.4s;
+
+	&.open {
+		grid-template-rows: 1fr;
+		visibility: visible;
+		transition:
+			grid-template-rows 0.4s ease,
+			visibility 0s;
+	}
+}
+
+.inner {
+	overflow: hidden;
+	min-height: 0; /* required for the 0fr trick to work */
+	/* Don't put padding here, it would stop the row from fully collapsing.
+	   Put padding/margins on the children instead. */
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.collapsible,
+	.collapsible.open {
+		transition: none;
+	}
+}
