@@ -1,10 +1,82 @@
 .techStack {
+	--gap: 3rem;
+	overflow: hidden;
+	width: 100%;
+
+	/* Fade the icons out at both edges */
+	mask-image: linear-gradient(
+		to right,
+		transparent,
+		black 10%,
+		black 90%,
+		transparent
+	);
+}
+
+.track {
 	display: flex;
-	flex-direction: row;
+	gap: var(--gap);
+	width: max-content;
+}
+
+.group {
+	display: flex;
+	flex-shrink: 0;
+	align-items: center;
 	justify-content: space-around;
-	.techStackIcon {
-		font-size: $size-3xl;
-		color: $navy-dark;
-		margin: 0 $sp-4;
+	gap: var(--gap);
+	min-width: 100%; /* keeps the loop seamless even with few items */
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	animation: scroll var(--duration) linear infinite;
+}
+
+.item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.techStackLabel {
+	font-size: 0.85rem;
+	font-weight: 500;
+	white-space: nowrap; /* keeps names like "JavaScript" on one line */
+}
+
+.techStackIcon {
+	width: 4rem;
+	height: 4rem;
+}
+
+/* Pause when the user hovers over the strip */
+.techStack:hover .group {
+	animation-play-state: paused;
+}
+
+@keyframes scroll {
+	to {
+		transform: translateX(calc(-100% - var(--gap)));
+	}
+}
+
+/* Respect users who ask for less motion: stop scrolling, show a static wrapped list */
+@media (prefers-reduced-motion: reduce) {
+	.track {
+		width: auto;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.group {
+		animation: none;
+		flex-wrap: wrap;
+		justify-content: center;
+		min-width: 0;
+	}
+
+	.group[aria-hidden="true"] {
+		display: none;
 	}
 }

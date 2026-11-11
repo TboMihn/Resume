@@ -1,32 +1,62 @@
+import type { IconType } from "react-icons";
+import {
+	DiHtml5,
+	DiJavascript1,
+	DiReact,
+	DiCss3,
+	DiSass,
+	DiPython,
+	DiDjango,
+	DiMysql,
+	DiGithubBadge,
+	DiPhotoshop,
+	DiIllustrator,
+} from "react-icons/di";
+import type { CSSProperties } from "react";
 import styles from "../styles/techstack.module.scss";
 
-import { DiHtml5 } from "react-icons/di";
-import { DiJavascript1 } from "react-icons/di";
-import { DiReact } from "react-icons/di";
-import { DiCss3 } from "react-icons/di";
-import { DiSass } from "react-icons/di";
-import { DiPython } from "react-icons/di";
-import { DiMysql } from "react-icons/di";
-import { DiGithubBadge } from "react-icons/di";
-import { DiDjango } from "react-icons/di";
-import { DiPhotoshop } from "react-icons/di";
-import { DiIllustrator } from "react-icons/di";
+interface Tech {
+	name: string;
+	Icon: IconType;
+}
+
+const technologies: Tech[] = [
+	{ name: "HTML5", Icon: DiHtml5 },
+	{ name: "JavaScript", Icon: DiJavascript1 },
+	{ name: "React", Icon: DiReact },
+	{ name: "CSS3", Icon: DiCss3 },
+	{ name: "Sass", Icon: DiSass },
+	{ name: "Python", Icon: DiPython },
+	{ name: "Django", Icon: DiDjango },
+	{ name: "MySQL", Icon: DiMysql },
+	{ name: "GitHub", Icon: DiGithubBadge },
+	{ name: "Photoshop", Icon: DiPhotoshop },
+	{ name: "Illustrator", Icon: DiIllustrator },
+];
+
+// Seconds each icon takes to pass by. Lower = faster.
+const SECONDS_PER_ITEM = 3;
 
 export default function Techstack() {
+	const marqueeStyle = {
+		"--duration": `${technologies.length * SECONDS_PER_ITEM}s`,
+	} as CSSProperties;
+
 	return (
-		<div className={styles.techStack}>
-			<DiHtml5 className={styles.techStackIcon} /> {/*HTML5 Icon*/}
-			<DiJavascript1 className={styles.techStackIcon} /> {/* JavaScript Icon */}
-			<DiReact className={styles.techStackIcon} /> {/* React Icon */}
-			<DiCss3 className={styles.techStackIcon} /> {/* css3 Icon */}
-			<DiSass className={styles.techStackIcon} /> {/* Sass Icon */}
-			<DiPython className={styles.techStackIcon} /> {/* Python Icon */}
-			<DiDjango className={styles.techStackIcon} /> {/* Django Icon */}
-			<DiMysql className={styles.techStackIcon} /> {/* MySQL Icon */}
-			<DiGithubBadge className={styles.techStackIcon} /> {/* GitHub Icon */}
-			<DiPhotoshop className={styles.techStackIcon} /> {/* Photoshop Icon */}
-			<DiIllustrator className={styles.techStackIcon} />{" "}
-			{/* Illustrator Icon */}
+		<div className={styles.techStack} style={marqueeStyle}>
+			<div className={styles.track}>
+				{/* Two identical groups. The second is hidden from screen readers. */}
+				{[0, 1].map((copy) => (
+					<ul key={copy} className={styles.group} aria-hidden={copy === 1}>
+						{technologies.map(({ name, Icon }) => (
+							<li key={name} className={styles.item}>
+								<Icon className={styles.techStackIcon} aria-hidden="true" />
+								<span className={styles.techStackLabel}>{name}</span>
+							</li>
+						))}
+					</ul>
+				))}
+			</div>
 		</div>
 	);
 }
