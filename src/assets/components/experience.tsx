@@ -1,10 +1,13 @@
 import styles from "../styles/experience.module.scss";
 
-export default function Jobs() {
+export default function Experience() {
 	return (
 		<div className={styles.experience}>
-			<div className={styles.experienceTitle}>Experience</div>
-			<div>This is my career path</div>
+			<div className={styles.sectionTitle}>Experience</div>
+			<div>
+				Listed are all of my past jobs for the last 10 years. For a full list,
+				click the expand list button to show the next 10 years.
+			</div>
 			<div className="timeline">
 				<div className="timeline-item">
 					<div className="timeline-dot"></div>

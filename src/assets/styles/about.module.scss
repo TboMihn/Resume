@@ -1,9 +1,20 @@
 .about {
-	display: flex;
-	width: 50%;
-}
-.about-title {
-	font-size: $size-xl;
-	font-weight: bold;
-	color: $navy-dark;
+	position: relative;
+	display: grid;
+	width: 100%;
+	@include halfContainer();
+
+	.aboutTitle {
+		font-size: $size-xl;
+		font-weight: bold;
+		color: $navy-dark;
+	}
+
+	.aboutText {
+		display: flex;
+		flex-direction: column;
+		justify-content: left;
+		text-align: left;
+		padding: 0px 20px 0px 20px;
+	}
 }

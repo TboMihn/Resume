@@ -1,3 +1,13 @@
+// ─── @Mixins ─────────────────────────────────────────────────────────────────
+@mixin halfContainer() {
+	width: 50%;
+	padding: $size-base;
+
+	@media (min-width: 768px) {
+		width: 100%;
+	}
+}
+
 // ─── Color Palette ───────────────────────────────────────────────────────────
 $navy-dark: #0b132b;
 $navy: #0d1b2a;

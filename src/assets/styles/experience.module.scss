@@ -1,12 +1,12 @@
 .experience {
 	display: flex;
 	flex-direction: column;
-	width: 100%;
-}
-.experienceTitle {
-	font-size: $size-xl;
-	font-weight: bold;
-	color: $navy-mid;
+	@include halfContainer();
+
+	.sectionTitle {
+		font-size: $size-3xl;
+		font-weight: bold;
+	}
 }
 
 .timeline {
@@ -44,12 +44,13 @@
 		transition:
 			box-shadow 0.3s ease,
 			transform 0.3s ease;
+
+		.timeline-card:hover {
+			transform: translateY(-5px);
+			box-shadow: 5px 5px 8px hsla(0, 0%, 0%, 0.15);
+		}
 	}
 
-	.timeline-card:hover {
-		transform: translateY(-5px);
-		box-shadow: 5px 5px 8px hsla(0, 0%, 0%, 0.15);
-	}
 	.timeline-item:nth-child(odd) .timeline-card {
 		left: 53%;
 	}

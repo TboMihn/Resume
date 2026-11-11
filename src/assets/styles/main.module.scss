@@ -2,4 +2,15 @@
 	background: white;
 	display: flex;
 	flex-direction: column;
+
+	.mainAboutEdu {
+		display: flex;
+
+		.mainLeftContainer {
+			width: 50%;
+		}
+		.mainRightContainer {
+			width: 50%;
+		}
+	}
 }
