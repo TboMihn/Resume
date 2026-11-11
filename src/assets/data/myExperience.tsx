@@ -1,20 +1,22 @@
-export interface expCard {
+export interface JobExperience {
+	id: string;
 	role: string;
 	company: string;
-	location: string;
+	coLocation: string;
 	startDate: string;
 	endDate: string;
-	bullets: string;
+	skills: string[];
 }
 
-export const experiences = [
+export const experienceData: JobExperience[] = [
 	{
+		id: "1",
 		role: "Receptionist",
 		company: "Castle Rock Pet Doc",
-		location: "Morristown, AZ",
+		coLocation: "Morristown, AZ",
 		startDate: "2024-08",
 		endDate: "2025-08",
-		bullets: [
+		skills: [
 			"Managed client interactions by telephone and in person in a busy veterinary practice",
 			"Coordinated appointment scheduling, billing inquiries, and payment processing",
 			"Entered and maintained confidential patient and medical records",
@@ -23,12 +25,13 @@ export const experiences = [
 		],
 	},
 	{
+		id: "2",
 		role: "Associate",
 		company: "Amazon, Inc.",
-		location: "Arlington, WA",
+		coLocation: "Arlington, WA",
 		startDate: "2024-01",
 		endDate: "2025-04",
-		bullets: [
+		skills: [
 			"Managed inventory stowing and investigated items that could not be properly processed.",
 			"Researched misplaced inventory and resolved inventory-location discrepancies.",
 			"Worked independently on inventory problem-solving assignments.",
@@ -37,12 +40,13 @@ export const experiences = [
 		],
 	},
 	{
+		id: "3",
 		role: "Office Manager",
 		company: "The Village Veterinarian",
-		location: "Chelan, WA",
+		coLocation: "Chelan, WA",
 		startDate: "2023-08",
 		endDate: "2023-11",
-		bullets: [
+		skills: [
 			"Coordinated daily practice operations, scheduling, and customer service.",
 			"Managed ordering and inventory for hospital supplies.",
 			"Prepared daily operational reports.",
@@ -51,12 +55,13 @@ export const experiences = [
 		],
 	},
 	{
+		id: "4",
 		role: "Warehouse Manager",
 		company: "GILI Sports",
-		location: "Phoenix, AZ",
+		coLocation: "Phoenix, AZ",
 		startDate: "2023-02",
 		endDate: "2023-09",
-		bullets: [
+		skills: [
 			"Supported warehouse operations, inventory management, shipping, and receiving.",
 			"Used Shopify and ShipStation to support order fulfillment and shipping-label generation.",
 			"Managed customer inquiries through Gorgias, providing email and chat support, order updates, and issue resolution.",
@@ -67,12 +72,13 @@ export const experiences = [
 		],
 	},
 	{
+		id: "5",
 		role: "Associate, Process Guide",
 		company: "Amazon, Inc.",
-		location: "Goodyear, AZ",
+		coLocation: "Goodyear, AZ",
 		startDate: "2021-04",
 		endDate: "2023-02",
-		bullets: [
+		skills: [
 			"Advanced into a Process Guide role supporting fulfillment operations and team performance.",
 			"Helped select, develop, and coordinate a team of powered industrial truck operators and problem-solvers.",
 			"Earned recognition as an Expert Problem Solver for Single ASIN Pallets.",
@@ -82,12 +88,13 @@ export const experiences = [
 		],
 	},
 	{
+		id: "6",
 		role: "Office Manager",
 		company: "Petsvet Animal Hospital",
-		location: "Surprise, AZ",
+		coLocation: "Surprise, AZ",
 		startDate: "2017-04",
 		endDate: "2021-03",
-		bullets: [
+		skills: [
 			"Managed daily office operations, client communications, scheduling, and administrative support.",
 			"Coordinated purchasing from identifying business needs through vendor ordering, receiving, and payment.",
 			"Managed purchase orders, vendor invoices, and accounts payable support.",
@@ -103,12 +110,13 @@ export const experiences = [
 		],
 	},
 	{
+		id: "7",
 		role: "Veterinary Assistant",
 		company: "Petsvet Animal Hospital",
-		location: "Surprise, AZ",
+		coLocation: "Surprise, AZ",
 		startDate: "2012-10",
 		endDate: "2016-05",
-		bullets: [
+		skills: [
 			"Coordinated purchasing from identifying business needs through vendor ordering, receiving, and payment.",
 			"Managed purchase orders, vendor invoices, and accounts payable support.",
 			"Communicated regularly with vendors regarding pricing, promotions, discounts, and product availability.",
@@ -122,12 +130,13 @@ export const experiences = [
 		],
 	},
 	{
+		id: "8",
 		role: "Bartender",
 		company: "Lockerroom Bar",
-		location: "Madison, WI",
+		coLocation: "Madison, WI",
 		startDate: "2007-04",
 		endDate: "2009-03",
-		bullets: [
+		skills: [
 			"Served drinks to customers in the bar.",
 			"Cooked food items in the kitchen of the bar.",
 			"Ran nightly reports for my shift and made nightly deposits.",
@@ -135,12 +144,13 @@ export const experiences = [
 		],
 	},
 	{
+		id: "9",
 		role: "Bartender, Bar Manager, Shift Supervisor",
 		company: "Nau-ti-Gal Restaurant & Bar",
-		location: "Madison, WI",
+		coLocation: "Madison, WI",
 		startDate: "2007-01",
 		endDate: "2009-08",
-		bullets: [
+		skills: [
 			"Served drinks to customers in the bar.",
 			"Served food items in the bar of the restaurant.",
 			"Served as Bar Manager from 2007 - 2009.",
@@ -155,12 +165,13 @@ export const experiences = [
 		],
 	},
 	{
+		id: "10",
 		role: "Associate, Sporting Goods",
 		company: "Walmart Supercenter",
-		location: "Madison, WI",
+		coLocation: "Madison, WI",
 		startDate: "2006-12",
 		endDate: "2007-01",
-		bullets: [
+		skills: [
 			"Responsible for performing background checks for gun sales",
 			"Performed inventory counts and price changes",
 			"Stocked merchandise on the sales floor",
@@ -168,12 +179,13 @@ export const experiences = [
 		],
 	},
 	{
+		id: "11",
 		role: "Associate, Sporting Goods",
 		company: "Walmart Supercenter",
-		location: "Fort Collins, CO",
+		coLocation: "Fort Collins, CO",
 		startDate: "2002-09",
 		endDate: "2006-12",
-		bullets: [
+		skills: [
 			"Responsible for performing background checks for gun sales",
 			"Assisted with firearm inventory following State and Federal regulations",
 			"Verified all firearms against the store logbook for accuracy",
@@ -184,12 +196,13 @@ export const experiences = [
 		],
 	},
 	{
+		id: "12",
 		role: "Bartender",
 		company: "Nau-ti-Gal Restaurant & Bar",
-		location: "Madison, WI",
+		coLocation: "Madison, WI",
 		startDate: "1999-09",
 		endDate: "2002-07",
-		bullets: [
+		skills: [
 			"Served drinks to customers in the bar.",
 			"Served food items in the bar of the restaurant.",
 			"Served as Bar Manager from 2007 - 2009.",
@@ -199,23 +212,25 @@ export const experiences = [
 		],
 	},
 	{
+		id: "13",
 		role: "Delivery Driver",
 		company: "Stock Lumber",
-		location: "Windsor, WI",
+		coLocation: "Windsor, WI",
 		startDate: "1998-07",
 		endDate: "1999-08",
-		bullets: [
+		skills: [
 			"Obtained a Commercial Driver’s License Class B",
 			"Delivered lumber, doors, windows and cabinets to job sites",
 		],
 	},
 	{
+		id: "14",
 		role: "Bartender",
 		company: "Mountain Jacks Restaurant",
-		location: "Madison, WI",
+		coLocation: "Madison, WI",
 		startDate: "1998-01",
 		endDate: "1998-07",
-		bullets: [
+		skills: [
 			"Served Drinks at the bar",
 			"Served appetizers and dinners at the bar",
 			"Took cash and credit payments",
@@ -223,12 +238,13 @@ export const experiences = [
 		],
 	},
 	{
+		id: "15",
 		role: "Bartender, Assistant Manager",
 		company: "Pearl's Nightclub - Crown Plaza Hotel",
-		location: "Madison, WI",
+		coLocation: "Madison, WI",
 		startDate: "1995-09",
 		endDate: "1998-01",
-		bullets: [
+		skills: [
 			"Served Drinks at the bar",
 			"Served appetizers and dinners at the bar",
 			"Took cash and credit payments",
@@ -239,12 +255,13 @@ export const experiences = [
 		],
 	},
 	{
+		id: "16",
 		role: "Bartender",
 		company: "Olive Garden Restaurant",
-		location: "Madison, WI",
+		coLocation: "Madison, WI",
 		startDate: "1993-09",
 		endDate: "1995-09",
-		bullets: [
+		skills: [
 			"Served Drinks at the bar",
 			"Served appetizers and dinners at the bar",
 			"Took cash and credit payments",

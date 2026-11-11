@@ -3,8 +3,8 @@ import styles from "../styles/about.module.scss";
 export default function About() {
 	return (
 		<div className={styles.about}>
-			<h3 className={styles.aboutTitle}>About me</h3>
-			<div className={styles.aboutText}>
+			<div className={styles.sectionTitle}>About me</div>
+			<div className={styles.sectionNormalText}>
 				<p>
 					I bring together a diverse background in technology, office
 					administration, customer service, management, and business operations.

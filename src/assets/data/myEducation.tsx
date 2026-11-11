@@ -1,4 +1,4 @@
-export interface eduCard {
+export interface Carddata {
 	school: string;
 	location: string;
 	degree: string;

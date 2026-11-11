@@ -1,0 +1,75 @@
+.timeline {
+	position: relative;
+	display: grid;
+	gap: 17px;
+}
+.timelineItem h3 {
+	margin-top: 0px;
+}
+
+.timelineItem div:last-child {
+	margin-bottom: 0px;
+}
+
+.timelineLine {
+	position: absolute;
+	top: 0px;
+	left: 11px;
+	transform: translatex(-50%);
+	height: 100%;
+	width: 4px;
+	background: black;
+}
+
+.timelineCard {
+	position: relative;
+	background: #eee;
+	width: 90%;
+	left: 30px;
+	padding: 17px;
+	box-sizing: border-box;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	box-shadow: 3px 3px 8px hsla(0, 0%, 0%, 0.1);
+	transition:
+		box-shadow 0.3s ease,
+		transform 0.3s ease;
+}
+
+.timelineCard:hover {
+	transform: translateY(-5px);
+	box-shadow: 5px 5px 8px hsla(0, 0%, 0%, 0.15);
+}
+
+// .timelineItem:nth-child(odd) .timelineCard {
+// 	left: 53%;
+// }
+.timelineDot {
+	position: absolute;
+	left: 0%;
+	height: 15px;
+	width: 15px;
+	background: white;
+	border-radius: 50%;
+	z-index: 1;
+	border: 4px solid #333;
+}
+@media (max-width: 767px) {
+	.timelineLine {
+		transform: unset;
+		left: 12px;
+	}
+	.timelineDot {
+		transform: unset;
+		left: 3px;
+	}
+
+	.timelineCard {
+		width: 90%;
+		left: 10%;
+	}
+
+	.timelineItem:nth-child(odd) .timelineCard {
+		left: 10%;
+	}
+}

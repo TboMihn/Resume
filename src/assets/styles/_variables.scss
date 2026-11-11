@@ -1,16 +1,28 @@
 // ─── @Mixins ─────────────────────────────────────────────────────────────────
 @mixin halfContainer() {
-	width: 50%;
-	padding: $size-base;
+	display: grid;
+	width: 100%;
+}
 
-	@media (min-width: 768px) {
-		width: 100%;
-	}
+@mixin sectionTitle() {
+	text-align: left;
+	font-size: $size-xl;
+	font-weight: bold;
+	color: $navy;
+	padding: $sp-4;
+}
+
+@mixin sectionNormalText() {
+	display: flex;
+	flex-direction: column;
+	justify-content: left;
+	text-align: left;
+	padding: 0px $sp-4 0px $sp-4;
 }
 
 // ─── Color Palette ───────────────────────────────────────────────────────────
 $navy-dark: #0b132b;
-$navy: #0d1b2a;
+$navy: navy;
 $navy-mid: #1b2d42;
 $steel: #2e4057;
 $slate: #48647a;

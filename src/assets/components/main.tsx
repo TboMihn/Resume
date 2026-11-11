@@ -1,8 +1,11 @@
 import styles from "../styles/main.module.scss";
+import type { ComponentType } from "react";
 
 import About from "../components/about";
-import Experience from "./experience";
+import ExperienceSection from "./experience";
 import Techstack from "./techstack";
+
+const TypedExperienceSection = ExperienceSection as unknown as ComponentType;
 
 export default function Main() {
 	return (
@@ -13,7 +16,7 @@ export default function Main() {
 					<About />
 				</section>
 				<section className={styles.mainRightContainer}>
-					<Experience />
+					<TypedExperienceSection />
 				</section>
 			</div>
 			<div className={styles.mainSchools}>{/* <Schools /> */}</div>

@@ -1,20 +1,11 @@
 .about {
-	position: relative;
-	display: grid;
-	width: 100%;
 	@include halfContainer();
 
-	.aboutTitle {
-		font-size: $size-xl;
-		font-weight: bold;
-		color: $navy-dark;
+	.sectionTitle {
+		@include sectionTitle();
 	}
 
-	.aboutText {
-		display: flex;
-		flex-direction: column;
-		justify-content: left;
-		text-align: left;
-		padding: 0px 20px 0px 20px;
+	.sectionNormalText {
+		@include sectionNormalText();
 	}
 }
