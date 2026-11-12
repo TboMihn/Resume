@@ -1,0 +1,42 @@
+.skills {
+	width: 100%;
+}
+
+.sectionTitle {
+	@include sectionTitle();
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1.5rem;
+	align-items: start;
+}
+
+.card {
+	padding: 1.5rem;
+	border: 1px solid rgba(128, 128, 128, 0.35);
+	border-radius: 0.75rem;
+}
+
+.cardTitle {
+	margin: 0 0 1rem;
+	font-size: 1.15rem;
+	font-weight: 700;
+}
+
+.cardList {
+	margin: 0;
+	padding-left: 1.25rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	font-size: 0.95rem;
+	line-height: 1.5;
+}
+
+@media (max-width: 40rem) {
+	.grid {
+		grid-template-columns: 1fr;
+	}
+}

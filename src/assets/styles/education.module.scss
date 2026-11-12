@@ -1,0 +1,11 @@
+.education {
+	width: 100%;
+}
+
+.sectionTitle {
+	@include sectionTitle();
+}
+
+/* Copy whatever layout rules .experienceTimeLine has in experience.module.scss */
+.educationTimeLine {
+}

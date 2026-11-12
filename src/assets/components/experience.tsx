@@ -18,28 +18,32 @@ export default function ExperienceSection() {
 		// 		<ExperienceCard key={item.id} job={item} />
 		// 	))}
 		// </section>
-		<section className={styles.experienceTimeLine}>
-			{firstJobs.map((item) => (
-				<ExperienceCard key={item.id} job={item} />
-			))}
+		<section className={styles.experience}>
+			<div className={styles.sectionTitle}>Experience</div>
 
-			{extraJobs.length > 0 && (
-				<>
-					<Collapsible isOpen={showAll}>
-						{extraJobs.map((item) => (
-							<ExperienceCard key={item.id} job={item} />
-						))}
-					</Collapsible>
+			<div className={styles.experienceTimeLine}>
+				{firstJobs.map((item) => (
+					<ExperienceCard key={item.id} job={item} />
+				))}
 
-					<button
-						className={styles.showMoreBtn}
-						onClick={() => setShowAll((prev) => !prev)}
-						aria-expanded={showAll}
-					>
-						{showAll ? "Show less" : `Show ${extraJobs.length} more `}
-					</button>
-				</>
-			)}
+				{extraJobs.length > 0 && (
+					<>
+						<Collapsible isOpen={showAll}>
+							{extraJobs.map((item) => (
+								<ExperienceCard key={item.id} job={item} />
+							))}
+						</Collapsible>
+
+						<button
+							className={styles.showMoreBtn}
+							onClick={() => setShowAll((prev) => !prev)}
+							aria-expanded={showAll}
+						>
+							{showAll ? "Show less" : `Show ${extraJobs.length} more `}
+						</button>
+					</>
+				)}
+			</div>
 		</section>
 	);
 }

@@ -1,14 +1,14 @@
-export interface Carddata {
+export interface EducationEntry {
 	school: string;
 	location: string;
 	degree: string;
 	program: string;
 	startDate: string;
 	endDate: string;
-	bullets: string;
+	bullets: string[];
 }
 
-export const education = [
+export const education: EducationEntry[] = [
 	{
 		school: "DeForest Area High School",
 		location: "DeForest, WI",

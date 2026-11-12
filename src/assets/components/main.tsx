@@ -3,6 +3,7 @@ import type { ComponentType } from "react";
 
 import About from "../components/about";
 import ExperienceSection from "./experience";
+import SkillsSection from "./skills";
 import Techstack from "./techstack";
 
 const TypedExperienceSection = ExperienceSection as unknown as ComponentType;
@@ -19,7 +20,10 @@ export default function Main() {
 					<TypedExperienceSection />
 				</section>
 			</div>
-			<div className={styles.mainSchools}>{/* <Schools /> */}</div>
+
+			<section className={styles.mainSkills}>
+				<SkillsSection />
+			</section>
 		</main>
 	);
 }

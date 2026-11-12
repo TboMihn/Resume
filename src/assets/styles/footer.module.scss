@@ -1,5 +1,72 @@
 .footer {
-	background: linear-gradient(135deg, $navy 0%, $steel 100%);
-	border-bottom: 3px solid $accent;
-	padding: $sp-12 $sp-6 $sp-10;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+	width: 100%;
+	margin-top: 4rem;
+	padding: 2rem 1rem;
+	border-top: 1px solid currentColor; /* swap for a muted color from your palette */
+	text-align: center;
+}
+
+.links {
+	display: flex;
+	gap: 1.5rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.link {
+	background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	display: inline-flex;
+	color: inherit;
+	transition:
+		transform 0.2s ease,
+		opacity 0.2s ease;
+
+	&:hover,
+	&:focus-visible {
+		transform: translateY(-3px);
+		opacity: 0.75;
+	}
+}
+
+.icon {
+	width: 1.75rem;
+	height: 1.75rem;
+}
+
+.copy {
+	margin: 0;
+	font-size: 0.85rem;
+	opacity: 0.75;
+}
+
+.topBtn {
+	background: none;
+	border: none;
+	color: inherit;
+	cursor: pointer;
+	font-weight: 600;
+	padding: 0.25rem 0;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.link {
+		transition: none;
+
+		&:hover,
+		&:focus-visible {
+			transform: none;
+		}
+	}
 }

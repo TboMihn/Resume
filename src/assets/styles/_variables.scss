@@ -10,6 +10,8 @@
 	font-weight: bold;
 	color: $navy;
 	padding: $sp-4;
+	border-bottom: 1px solid $navy;
+	margin: 10px;
 }
 
 @mixin sectionNormalText() {

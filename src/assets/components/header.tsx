@@ -1,6 +1,8 @@
 import styles from "../styles/header.module.scss";
 import Navbar from "../components/navbar";
-import { FaEnvelope, FaFileDownload } from "react-icons/fa";
+import { EmailLink } from "../components/emailLink";
+import { contact } from "../data/contact";
+import { FaEnvelope } from "react-icons/fa";
 
 export default function Header() {
 	return (
@@ -20,14 +22,23 @@ export default function Header() {
 							A versatile professional who connects technology, people, and
 							business operations.
 						</div>
-						<button type="button" className={styles.headerMainLeftBtn}>
+
+						<EmailLink
+							{...contact}
+							subject="Hello from your resume"
+							className={styles.headerMainLeftBtn}
+							ariaLabel="Get in touch by email"
+						>
 							<div className={styles.headerMainLeftBtnText}>
 								Get in Touch
 								<span>
-									<FaEnvelope className={styles.headerMainLeftBtnIcon} />
+									<FaEnvelope
+										className={styles.headerMainLeftBtnIcon}
+										aria-hidden="true"
+									/>
 								</span>
 							</div>
-						</button>
+						</EmailLink>
 					</div>
 					<div className={styles.headerMainRight}></div>
 				</div>
